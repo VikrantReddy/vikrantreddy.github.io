@@ -1,8 +1,32 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import styled, { css } from 'styled-components'
 import { ReactComponent as Herosvg } from "../assets/svgs/herosvg.svg";
+import Typed from "typed.js";
+
 function Hero() {
+    const el = useRef(null);
+    const [heroText, setHerotext] = useState("I am Vikrant");
+
+
+    useEffect(() => {
+        const typed = new Typed(el.current, {
+            strings: [heroText], // Strings to display
+            startDelay: 200,
+            typeSpeed: 80,
+            backSpeed: 100,
+            backDelay: 100,
+            smartBackspace: true,
+            loop: false,
+            showCursor: false,
+        });
+
+        // Destropying
+        return () => {
+            typed.destroy();
+        };
+    }, []);
+
     return (
         <HeroContainer>
             <Row>
@@ -10,18 +34,17 @@ function Hero() {
                     <h4>Vikrant Reddy</h4>
                 </Col>
                 <Col style={{ 'text-align': "right" }}>
-                    Now playing
+                    Now Playing
                 </Col>
             </Row>
             <Row>
                 <Col style={{ 'margin-top': "15vh" }}>
-                    <h2>
-                        Hey there!
-                        I'm Vikrant
-                    </h2>
+                    <h2 ref={el}></h2>
                 </Col>
-                <Col md={6}>
+                <Col md={5}>
                     <HeroSvg />
+                </Col>
+                <Col md={1}>
                 </Col>
             </Row>
             <Row>
@@ -36,12 +59,11 @@ export default Hero
 
 const HeroContainer = styled(Container)`
     background-color:#5692EB;
-    color:whitesmoke;
+    color:#f2f2f2;
     font-family: 'Open Sans', sans-serif;
     padding:5%;
     margin:2%;
     max-width: 96%;
-    height:80vh;
 `
 const HeroButton = styled(Button)`
   background: transparent;
@@ -54,11 +76,13 @@ const HeroButton = styled(Button)`
 
   ${props => props.primary && css`
     background: #3F3D56;
-    color: white;
+    color: #f2f2f2;
   `}
 `;
 
 const HeroSvg = styled(Herosvg)`
     height:inherit;
     width:inherit;
+    padding:10%;
+    padding-top:15%;
 `
