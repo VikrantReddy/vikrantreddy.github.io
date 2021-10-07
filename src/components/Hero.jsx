@@ -1,32 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import styled, { css } from 'styled-components'
 import { ReactComponent as Herosvg } from "../assets/svgs/herosvg.svg";
-import Typed from "typed.js";
+import Herotext from "./Herotext.jsx";
 
 function Hero() {
-    const el = useRef(null);
-    const [heroText, setHerotext] = useState("I am Vikrant");
-
-
-    useEffect(() => {
-        const typed = new Typed(el.current, {
-            strings: [heroText], // Strings to display
-            startDelay: 200,
-            typeSpeed: 80,
-            backSpeed: 100,
-            backDelay: 100,
-            smartBackspace: true,
-            loop: false,
-            showCursor: false,
-        });
-
-        // Destropying
-        return () => {
-            typed.destroy();
-        };
-    }, []);
-
     return (
         <HeroContainer>
             <Row>
@@ -39,7 +17,7 @@ function Hero() {
             </Row>
             <Row>
                 <Col style={{ 'margin-top': "15vh" }}>
-                    <h2 ref={el}></h2>
+                    <Herotext />
                 </Col>
                 <Col md={5}>
                     <HeroSvg />
