@@ -16,7 +16,7 @@ function Hero() {
                 </Col>
             </Row>
             <Row>
-                <Col style={{ 'margin-top': "15vh" }}>
+                <Col style={{ 'margin-top': "10vh" }}>
                     <Herotext />
                 </Col>
                 <Col md={5}>
@@ -26,8 +26,8 @@ function Hero() {
                 </Col>
             </Row>
             <Row>
-                <HeroButton>Know More</HeroButton>
-                <HeroButton primary>Show Work</HeroButton>
+                <HeroButton primary>Know More</HeroButton>
+                <HeroButton>Show Work</HeroButton>
             </Row>
         </HeroContainer >
     )
