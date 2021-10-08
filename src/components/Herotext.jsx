@@ -4,7 +4,7 @@ import Typed from "typed.js";
 function Herotext() {
 
     const el = useRef(null);
-    const [heroText, setHerotext] = useState("I am Vikrant");
+    const [heroText, setHerotext] = useState("I am Vikrant Reddy");
 
 
     useEffect(() => {
@@ -16,7 +16,7 @@ function Herotext() {
             backDelay: 100,
             smartBackspace: true,
             loop: false,
-            showCursor: false,
+            showCursor: true,
         });
 
         // Destropying
@@ -26,7 +26,10 @@ function Herotext() {
     }, []);
 
     return (
-        <h2 ref={el}></h2>
+        <h2 ref={el} style={{
+            display: "inline",
+            fontSize: 30
+        }}></h2>
     )
 }
 

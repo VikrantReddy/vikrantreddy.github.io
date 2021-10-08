@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import styled, { css } from 'styled-components'
 import { ReactComponent as Herosvg } from "../assets/svgs/herosvg.svg";
+import { ReactComponent as Logosvg } from "../assets/svgs/logo.svg";
 import Herotext from "./Herotext.jsx";
 
 function Hero() {
@@ -9,8 +10,10 @@ function Hero() {
         <HeroContainer>
             <Row>
                 <Col>
-                    <h4>Vikrant Reddy</h4>
+                    {/* <img src={"heroicon.png"} height={90} style={{ "margin": -30 }} /> */}
+                    <Logosvg height={90} style={{ "margin": -45 }} />
                 </Col>
+
                 <Col style={{ 'text-align': "right" }}>
                     Now Playing
                 </Col>
