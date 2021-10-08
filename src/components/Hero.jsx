@@ -47,13 +47,13 @@ const HeroButton = styled(Button)`
   background: transparent;
   border-radius: 3px;
   font-family: "Montserrat", sans-serif;
-  border: 2px solid #3F3D56;
-  color: #3F3D56;
+  border: 2px solid #474C4C;
+  color: #474C4C;
   margin: 1em;
   padding: 0.25em 1em;
 
   ${props => props.primary && css`
-    background: #3F3D56;
+    background: #474C4C;
     color: #f2f2f2;
   `}
 `;
