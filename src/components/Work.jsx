@@ -5,10 +5,10 @@ import styled from 'styled-components'
 function Work() {
     return (
         <WorkContainer>
-            <h2 style={{ "textAlign": "center", "marginBottom": "10vh" }}>My Works</h2>
-            <Row>
-                <Col>
-                    <Card style={{ width: '18rem' }}>
+            <h2 style={{ "textAlign": "center", "marginBottom": "10vh", "color": "white" }}>My Works</h2>
+            <Row xs={1} md={2} className="g-8 mx-auto">
+                <WorkCol>
+                    <Card style={{ width: '18rem' }} className="mx-auto" >
                         <Card.Body>
                             <Card.Title>OCR Pipleline</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Python</Card.Subtitle>
@@ -17,9 +17,9 @@ function Work() {
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                </Col>
-                <Col>
-                    <Card style={{ width: '18rem' }}>
+                </WorkCol>
+                <WorkCol>
+                    <Card style={{ width: '18rem' }} className="mx-auto" >
                         <Card.Body>
                             <Card.Title>Automated Dropshipping</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Python</Card.Subtitle>
@@ -28,9 +28,9 @@ function Work() {
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                </Col>
-                <Col>
-                    <Card style={{ width: '18rem' }}>
+                </WorkCol>
+                <WorkCol>
+                    <Card style={{ width: '18rem' }} className="mx-auto" >
                         <Card.Body>
                             <Card.Title>Synchronized Player</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Javascript</Card.Subtitle>
@@ -40,9 +40,9 @@ function Work() {
 
                         </Card.Body>
                     </Card>
-                </Col>
-                <Col>
-                    <Card style={{ width: '18rem' }}>
+                </WorkCol>
+                <WorkCol>
+                    <Card style={{ width: '18rem' }} className="mx-auto" >
                         <Card.Body>
                             <Card.Title>Advanced Text Snipper</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Python</Card.Subtitle>
@@ -51,12 +51,10 @@ function Work() {
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                </Col>
-            </Row>
-            <br />
-            <Row>
-                <Col>
-                    <Card style={{ width: '18rem' }}>
+                </WorkCol>
+
+                <WorkCol>
+                    <Card style={{ width: '18rem' }} className="mx-auto" >
                         <Card.Body>
                             <Card.Title>Parking finder</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">React Native & C#</Card.Subtitle>
@@ -65,11 +63,11 @@ function Work() {
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                </Col>
-                <Col>
-                    <Card style={{ width: '18rem' }}>
+                </WorkCol>
+                <WorkCol>
+                    <Card style={{ width: '18rem' }} className="mx-auto" >
                         <Card.Body>
-                            <Card.Title>Excel2DB</Card.Title>
+                            <Card.Title>Excel to Database</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Python & Google Sheets</Card.Subtitle>
                             <Card.Text>
                                 A database with CRUD operations on a cloud hosted google sheets speadsheet for MVP testing and showcasing purposes
@@ -77,9 +75,9 @@ function Work() {
 
                         </Card.Body>
                     </Card>
-                </Col>
-                <Col>
-                    <Card style={{ width: '18rem' }}>
+                </WorkCol>
+                <WorkCol>
+                    <Card style={{ width: '18rem' }} className="mx-auto"  >
                         <Card.Body>
                             <Card.Title>Amazon Watcher</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Python</Card.Subtitle>
@@ -88,9 +86,9 @@ function Work() {
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                </Col>
-                <Col>
-                    <Card style={{ width: '18rem' }}>
+                </WorkCol>
+                <WorkCol>
+                    <Card style={{ width: '18rem' }} className="mx-auto" >
                         <Card.Body>
                             <Card.Title>Mobile Mouse</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">React Native & Python</Card.Subtitle>
@@ -99,7 +97,8 @@ function Work() {
                             </Card.Text>
                         </Card.Body>
                     </Card>
-                </Col>
+                </WorkCol>
+
             </Row>
         </WorkContainer >
     )
@@ -109,9 +108,13 @@ export default Work
 
 
 const WorkContainer = styled(Container)`
-    background-color:#1642DB;;
+    background-color:#1642DB;
     font-family: 'Open Sans', sans-serif;
     padding:5%;
     margin:2%;
     max-width: 96%;
+`
+
+const WorkCol = styled(Col)`
+    margin: 1rem 0;
 `
