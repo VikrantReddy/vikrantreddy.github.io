@@ -5,7 +5,7 @@ import styled from 'styled-components'
 function About() {
     return (
         <AboutContainer>
-            <h2 style={{ "text-align": "center" }}>About Me</h2>
+            <h2 style={{ "textAlign": "center" }}>About Me</h2>
             <Row style={{ "margin": "10% 0" }}>
                 <Col md={{ span: 3, offset: 1 }}>
                     <AboutText>

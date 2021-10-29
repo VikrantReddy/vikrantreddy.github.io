@@ -1,11 +1,11 @@
 import React from 'react'
-import { Container, Row, Col, Carousel } from 'react-bootstrap'
-import styled, { css } from 'styled-components'
+import { Container, Carousel } from 'react-bootstrap'
+import styled from 'styled-components'
 
 function Work() {
     return (
         <WorkContainer>
-            <h2 style={{ "text-align": "center" }}>My Works</h2>
+            <h2 style={{ "textAlign": "center" }}>My Works</h2>
 
             <Carousel style={{ "margin": "4% 0" }}>
                 <Carousel.Item interval={1500}>
