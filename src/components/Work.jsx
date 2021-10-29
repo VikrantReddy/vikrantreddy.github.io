@@ -1,47 +1,106 @@
 import React from 'react'
-import { Container, Carousel } from 'react-bootstrap'
+import { Container, Card, Row, Col } from 'react-bootstrap'
 import styled from 'styled-components'
 
 function Work() {
     return (
         <WorkContainer>
-            <h2 style={{ "textAlign": "center" }}>My Works</h2>
+            <h2 style={{ "textAlign": "center", "marginBottom": "10vh" }}>My Works</h2>
+            <Row>
+                <Col>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Body>
+                            <Card.Title>OCR Pipleline</Card.Title>
+                            <Card.Subtitle className="mb-2 text-muted">Python</Card.Subtitle>
+                            <Card.Text>
+                                A pipeline of scripts to scrape, screenshot and convert tables from online into sheets and further test their websites for legible leads
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Body>
+                            <Card.Title>Automated Dropshipping</Card.Title>
+                            <Card.Subtitle className="mb-2 text-muted">Python</Card.Subtitle>
+                            <Card.Text>
+                                Plug and play scripts to scrape ecom websites with a CMS like shopify or squarespace to create your own dropshipping business
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Body>
+                            <Card.Title>Synchronized Player</Card.Title>
+                            <Card.Subtitle className="mb-2 text-muted">Javascript</Card.Subtitle>
+                            <Card.Text>
+                                A chrome extension that lets you watch your favorite tv shows and movies with your friends on any platform
+                            </Card.Text>
 
-            <Carousel style={{ "margin": "4% 0" }}>
-                <Carousel.Item interval={1500}>
-                    <img
-                        className="d-block w-100"
-                        src="https://via.placeholder.com/800x400?text=First slide&bg=373940"
-                        alt="First slide"
-                    />
-                    <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item interval={1500}>
-                    <img
-                        className="d-block w-100"
-                        src="https://via.placeholder.com/800x400?text=Second slide&bg=282c34"
-                        alt="Second slide"
-                    />
-                    <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item interval={1500}>
-                    <img
-                        className="d-block w-100"
-                        src="https://via.placeholder.com/800x400?text=Third slide&bg=20232a"
-                        alt="Third slide"
-                    />
-                    <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-            </Carousel>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Body>
+                            <Card.Title>Advanced Text Snipper</Card.Title>
+                            <Card.Subtitle className="mb-2 text-muted">Python</Card.Subtitle>
+                            <Card.Text>
+                                Windows native screen snipper with additional character recognition features from the core to copy text from images on the go
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </Col>
+            </Row>
+            <br />
+            <Row>
+                <Col>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Body>
+                            <Card.Title>Parking finder</Card.Title>
+                            <Card.Subtitle className="mb-2 text-muted">React Native & C#</Card.Subtitle>
+                            <Card.Text>
+                                A programmed ESP8266 with a web socket server hosted on cloud to help users navigate to the closest vaccant parking spot
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Body>
+                            <Card.Title>Excel2DB</Card.Title>
+                            <Card.Subtitle className="mb-2 text-muted">Python & Google Sheets</Card.Subtitle>
+                            <Card.Text>
+                                A database with CRUD operations on a cloud hosted google sheets speadsheet for MVP testing and showcasing purposes
+                            </Card.Text>
+
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Body>
+                            <Card.Title>Amazon Watcher</Card.Title>
+                            <Card.Subtitle className="mb-2 text-muted">Python</Card.Subtitle>
+                            <Card.Text>
+                                Scrapes selected amazon products periodically and notifies user via E-mail when the item under watch is on a discont
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col>
+                    <Card style={{ width: '18rem' }}>
+                        <Card.Body>
+                            <Card.Title>Mobile Mouse</Card.Title>
+                            <Card.Subtitle className="mb-2 text-muted">React Native & Python</Card.Subtitle>
+                            <Card.Text>
+                                An app that lets users use their phone by sensing the accelerometer to scroll through long web comics
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </Col>
+            </Row>
         </WorkContainer >
     )
 }
@@ -51,7 +110,6 @@ export default Work
 
 const WorkContainer = styled(Container)`
     background-color:#1642DB;;
-    color:#f2f2f2;
     font-family: 'Open Sans', sans-serif;
     padding:5%;
     margin:2%;
