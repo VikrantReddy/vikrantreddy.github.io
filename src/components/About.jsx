@@ -6,7 +6,7 @@ function About() {
 
     const [isFlipped1, flip1] = useState(false)
     const [isFlipped2, flip2] = useState(false)
-
+    const [isin, setIn] = useState(false)
     function handleClick1(e) {
         e.preventDefault();
         flip1(!isFlipped1)
@@ -23,7 +23,7 @@ function About() {
             <Row style={{ "margin": "10% 0" }}>
                 <Col>
                     <ReactCardFlip isFlipped={isFlipped1} flipDirection="horizontal">
-                        <AboutRow onClick={handleClick1}>
+                        <AboutRow onClick={handleClick1} onMouseEnter={() => flip1(!isFlipped1)} onMouseLeave={() => flip1(!isFlipped1)}>
                             <Col>
                                 Personal.
                             </Col>
@@ -37,7 +37,7 @@ function About() {
 
                 <Col>
                     <ReactCardFlip isFlipped={isFlipped2} flipDirection="horizontal">
-                        <AboutRow onClick={handleClick2}>
+                        <AboutRow onClick={handleClick2} onMouseEnter={() => flip2(!isFlipped2)} onMouseLeave={() => flip2(!isFlipped2)}>
                             Professional.
                         </AboutRow>
 
