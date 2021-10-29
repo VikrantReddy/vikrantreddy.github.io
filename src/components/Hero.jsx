@@ -34,8 +34,8 @@ const HeroContainer = styled(Container)`
     background-color:#1642DB;
     color:#f2f2f2;
     font-family: 'Open Sans', sans-serif;
-    padding:6% 5% 5% 5%;
-    margin:8% 2% 2% 2%;
+    padding:5%;
+    margin: 5% 2% 2% 2%;
     max-width: 96%;
     min-height: 64vh;
 `
