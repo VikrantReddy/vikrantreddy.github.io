@@ -1,39 +1,36 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Typed from "typed.js";
 
-function Herotext() {
-
-    const el = useRef(null);
-    const [heroText, setHerotext] = useState("I am Vikrant Reddy");
-
-
+const Herotext = ({ text }) => {
     useEffect(() => {
-        const typed = new Typed(el.current, {
-            strings: [heroText, "newtext"], // Strings to display
-            isDefaultString: true,
-            startDelay: 200,
-            typeSpeed: 80,
-            backSpeed: 100,
-            backDelay: 100,
-            smartBackspace: true,
-            loop: false,
-            showCursor: true,
-        });
 
-        // Destropying
+        // Options for the Typed object
+        const options = {
+            strings: [text],
+            typeSpeed: 50,
+            startDelay: 200,
+            backDelay: 100,
+        };
+
+        // New Typed instance
+        const typed = new Typed('#instruction', options);
+
+        // Destroy Typed instance on unmounting the component to prevent memory leaks
         return () => {
             typed.destroy();
         };
-    }, []);
+    }, [text]);
 
     return (
-        <div style={{ fontSize: "2.5em" }}>
-            <p ref={el} style={{
-                display: "inline",
-            }}></p>
-            <button onPress={() => { setHerotext("New text") }}></button>
-        </div>
-    )
-}
+        <section style={{
+            fontSize: "2.5em"
+        }}>
+            <div id='instruction' style={{
+                display: "inline"
+            }}></div>
+        </section >
+    );
+};
+
 
 export default Herotext
