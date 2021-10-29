@@ -50,7 +50,7 @@ export default Work
 
 
 const WorkContainer = styled(Container)`
-    background-color:#5692EB;
+    background-color:#4682DB;
     color:#f2f2f2;
     font-family: 'Open Sans', sans-serif;
     padding:5%;
