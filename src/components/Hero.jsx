@@ -6,7 +6,7 @@ import Herotext from "./Herotext.jsx";
 
 function Hero() {
     const [herotext, setHerotext] = useState(0);
-    let textlist = ["Vikrant is a developer", "He works as a full-time freelancer and a part-time tutor", "He saves time and squashes bugs", "HTML is a programming language.\nYou should totally hire him", "Let his work speak for him \n👇"]
+    let textlist = ["Vikrant codes less, debugs more", "He works as a full-time freelancer and a part-time tutor", "He squashes bugs and saves time", "HTML is a programming language.\nYou should totally hire him", "Let his work speak for him \n👇"]
     let buttonlist = ["Tell me more", "Neat!", "1 truth 1 lie", "See why"]
     return (
         <HeroContainer>
@@ -17,7 +17,7 @@ function Hero() {
                 </Col>
 
                 <Col style={{ 'textAlign': "right" }}>
-                    Now Playing
+                    {/* Now Playing */}
                 </Col>
             </Row>
             <Row>
