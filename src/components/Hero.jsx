@@ -21,7 +21,7 @@ function Hero() {
                 </Col>
             </Row>
             <Row>
-                <Col style={{ 'marginTop': "25vh" }} xs={{ span: 12, order: 2 }} md={{ span: 6, order: 1 }} >
+                <Col style={{ 'marginTop': "10%" }} xs={{ span: 12, order: 2 }} md={{ span: 6, order: 1 }} >
                     {<Herotext text={textlist[herotext]} />}
                     <Row style={{ 'marginTop': "5vh" }}>
                         {herotext < textlist.length - 1 &&
