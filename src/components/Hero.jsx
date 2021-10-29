@@ -42,7 +42,7 @@ function Hero() {
 export default Hero
 
 const HeroContainer = styled(Container)`
-    background-color:#4682DB;
+    background-color:#1642DB;
     color:#f2f2f2;
     font-family: 'Open Sans', sans-serif;
     padding:5%;
@@ -53,13 +53,13 @@ const HeroButton = styled(Button)`
   background: transparent;
   border-radius: 3px;
   font-family: "Montserrat", sans-serif;
-  border: 2px solid #474C4C;
-  color: #474C4C;
+  border: 2px solid #272C2C;
+  color: #272C2C;
   margin: 1em;
   padding: 0.25em 1em;
 
   ${props => props.primary && css`
-    background: #474C4C;
+    background: #272C2C;
     color: #f2f2f2;
   `}
 `;

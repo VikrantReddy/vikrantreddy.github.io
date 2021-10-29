@@ -26,7 +26,7 @@ function About() {
 export default About
 
 const AboutContainer = styled(Container)`
-    background-color:#474C4C;
+    background-color:#272C2C;
     color:#f2f2f2;
     font-family: 'Open Sans', sans-serif;
     padding:5%;

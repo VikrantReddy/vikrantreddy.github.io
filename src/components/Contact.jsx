@@ -17,7 +17,7 @@ function Contact() {
 export default Contact
 
 const ContactContainer = styled(Container)`
-    background-color:#474C4C;
+    background-color:#272C2C;
     color:#f2f2f2;
     font-family: 'Open Sans', sans-serif;
     padding:5%;
@@ -29,13 +29,13 @@ const HeroButton = styled(Button)`
   font-size:larger;
   border-radius: 3px;
   font-family: "Montserrat", sans-serif;
-  border: 2px solid #5692EB;
-  color: #5692EB;
+  border: 2px solid #1642DB;
+  color: #1642DB;
   margin: 1em;
   padding: 0.25em 1.5em;
 
   ${props => props.primary && css`
-    background: #5692EB;
+    background: #1642DB;
     color: #f2f2f2;
   `}
 `;
