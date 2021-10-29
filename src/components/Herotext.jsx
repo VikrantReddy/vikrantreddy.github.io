@@ -25,7 +25,7 @@ const Herotext = ({ text }) => {
         }}>
             <div id='instruction' style={{
                 display: "inline",
-                "white-space": "pre-line"
+                whiteSpace: "pre-line"
             }}></div>
         </section >
     );
