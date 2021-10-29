@@ -8,7 +8,7 @@ function Contact() {
             <h2 style={{ "textAlign": "center" }}>Contact Me</h2>
             <Row className="justify-content-center">
                 <HeroButton primary="true">Form</HeroButton>
-                <HeroButton>Email</HeroButton>
+                <HeroButton href={"mailto:vikrantreddy@hotmail.com"}>Email</HeroButton>
             </Row>
         </ContactContainer >
     )
