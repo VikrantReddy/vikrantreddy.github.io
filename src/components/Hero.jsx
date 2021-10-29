@@ -11,16 +11,6 @@ function Hero() {
     return (
         <HeroContainer>
             <Row>
-                <Col>
-                    {/* <img src={"heroicon.png"} height={90} style={{ "margin": -30 }} /> */}
-
-                </Col>
-
-                <Col style={{ 'textAlign': "right" }}>
-                    {/* Now Playing */}
-                </Col>
-            </Row>
-            <Row>
                 <Col style={{ 'marginTop': "10%" }} xs={{ span: 12, order: 2 }} md={{ span: 6, order: 1 }} >
                     {<Herotext text={textlist[herotext]} />}
                     <Row style={{ 'marginTop': "5vh" }}>
@@ -44,13 +34,14 @@ const HeroContainer = styled(Container)`
     background-color:#1642DB;
     color:#f2f2f2;
     font-family: 'Open Sans', sans-serif;
-    padding:5%;
-    margin:2%;
+    padding:6% 5% 5% 5%;
+    margin:8% 2% 2% 2%;
     max-width: 96%;
+    min-height: 64vh;
 `
 const HeroButton = styled(Button)`
   background: transparent;
-  border-radius: 3px;
+  border-radius: 5px;
   font-family: "Montserrat", sans-serif;
   border: 2px solid #272C2C;
   color: #272C2C;
