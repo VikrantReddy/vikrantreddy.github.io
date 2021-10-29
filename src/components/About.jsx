@@ -6,7 +6,7 @@ function About() {
 
     const [isFlipped1, flip1] = useState(false)
     const [isFlipped2, flip2] = useState(false)
-    const [isin, setIn] = useState(false)
+
     function handleClick1(e) {
         e.preventDefault();
         flip1(!isFlipped1)
@@ -17,33 +17,35 @@ function About() {
         flip2(!isFlipped2)
     }
 
+
+
     return (
         <AboutContainer>
             <h2 style={{ "textAlign": "center" }}>About Me</h2>
             <Row style={{ "margin": "10% 0" }}>
-                <Col>
+                <Col className="hoverpair">
                     <ReactCardFlip isFlipped={isFlipped1} flipDirection="horizontal">
-                        <AboutRow onClick={handleClick1} onMouseEnter={() => flip1(!isFlipped1)} onMouseLeave={() => flip1(!isFlipped1)}>
+                        <AboutCard onClick={handleClick1} onMouseEnter={handleClick1}>
                             <Col>
                                 Personal.
                             </Col>
-                        </AboutRow>
+                        </AboutCard >
 
-                        <AboutRow onClick={handleClick1}>
+                        <AboutCard onClick={handleClick1} onMouseLeave={handleClick1}>
                             This is the back of the card.
-                        </AboutRow>
+                        </AboutCard >
                     </ReactCardFlip>
                 </Col>
 
                 <Col>
                     <ReactCardFlip isFlipped={isFlipped2} flipDirection="horizontal">
-                        <AboutRow onClick={handleClick2} onMouseEnter={() => flip2(!isFlipped2)} onMouseLeave={() => flip2(!isFlipped2)}>
+                        <AboutCard onClick={handleClick2} onMouseEnter={handleClick2}>
                             Professional.
-                        </AboutRow>
+                        </AboutCard >
 
-                        <AboutRow onClick={handleClick2}>
+                        <AboutCard onClick={handleClick2} onMouseLeave={handleClick2}>
                             This is the back of the card.
-                        </AboutRow>
+                        </AboutCard >
                     </ReactCardFlip>
                 </Col>
             </Row>
@@ -66,7 +68,7 @@ const AboutText = styled.p`
     font-size: larger;
     text-align: center;
 `
-const AboutRow = styled(Col)`
+const AboutCard = styled.div`
     border: 1px solid;
     padding: 1rem;
     margin: 0 2vw;
