@@ -9,7 +9,8 @@ function Herotext() {
 
     useEffect(() => {
         const typed = new Typed(el.current, {
-            strings: [heroText], // Strings to display
+            strings: [heroText, "newtext"], // Strings to display
+            isDefaultString: true,
             startDelay: 200,
             typeSpeed: 80,
             backSpeed: 100,
@@ -26,10 +27,12 @@ function Herotext() {
     }, []);
 
     return (
-        <h2 ref={el} style={{
-            display: "inline",
-            fontSize: 30
-        }}></h2>
+        <div style={{ fontSize: "2.5em" }}>
+            <p ref={el} style={{
+                display: "inline",
+            }}></p>
+            <button onPress={() => { setHerotext("New text") }}></button>
+        </div>
     )
 }
 

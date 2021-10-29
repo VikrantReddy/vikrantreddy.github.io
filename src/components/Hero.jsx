@@ -19,13 +19,11 @@ function Hero() {
                 </Col>
             </Row>
             <Row>
-                <Col style={{ 'margin-top': "10vh" }}>
+                <Col style={{ 'margin-top': "10vh" }} xs={{ span: 12, order: 2 }} md={{ span: 6, order: 1 }} >
                     <Herotext />
                 </Col>
-                <Col md={5}>
+                <Col xs={{ span: 10, order: 1, offset: 1 }} md={{ span: 5, order: 2 }}>
                     <HeroSvg />
-                </Col>
-                <Col md={1}>
                 </Col>
             </Row>
             <Row>
