@@ -4,7 +4,6 @@ import Typed from "typed.js";
 const Herotext = ({ text }) => {
     useEffect(() => {
 
-        // Options for the Typed object
         const options = {
             strings: [text],
             typeSpeed: 50,
@@ -12,10 +11,9 @@ const Herotext = ({ text }) => {
             backDelay: 100,
         };
 
-        // New Typed instance
+
         const typed = new Typed('#instruction', options);
 
-        // Destroy Typed instance on unmounting the component to prevent memory leaks
         return () => {
             typed.destroy();
         };
@@ -23,10 +21,11 @@ const Herotext = ({ text }) => {
 
     return (
         <section style={{
-            fontSize: "2.5em"
+            fontSize: "3em", fontWeight: "bold"
         }}>
             <div id='instruction' style={{
-                display: "inline"
+                display: "inline",
+                "white-space": "pre-line"
             }}></div>
         </section >
     );

@@ -7,12 +7,14 @@ import Herotext from "./Herotext.jsx";
 
 function Hero() {
     const [herotext, setHerotext] = useState(0);
+    let textlist = ["Vikrant is a developer", "He works as a full-time freelancer and a part-time tutor", "He saves time and squashes bugs", "HTML is a programming language.\nYou should totally hire him", "Let his work speak for him \n👇"]
+    let buttonlist = ["Tell me more", "Neat!", "1 truth 1 lie", "See why"]
     return (
         <HeroContainer>
             <Row>
                 <Col>
                     {/* <img src={"heroicon.png"} height={90} style={{ "margin": -30 }} /> */}
-                    <Logosvg height={90} style={{ "margin": -45 }} />
+                    <Logosvg height={90} style={{ "margin": "-5% 0%" }} />
                 </Col>
 
                 <Col style={{ 'textAlign': "right" }}>
@@ -20,16 +22,18 @@ function Hero() {
                 </Col>
             </Row>
             <Row>
-                <Col style={{ 'marginTop': "10vh" }} xs={{ span: 12, order: 2 }} md={{ span: 6, order: 1 }} >
-                    {<Herotext text={["anc", "bvs"][herotext]} />}
+                <Col style={{ 'marginTop': "25vh" }} xs={{ span: 12, order: 2 }} md={{ span: 6, order: 1 }} >
+                    {<Herotext text={textlist[herotext]} />}
+                    <Row style={{ 'marginTop': "5vh" }}>
+                        {herotext < textlist.length - 1 &&
+                            <HeroButton primary="true" onClick={() => { setHerotext((herotext + 1) % textlist.length); }}>{buttonlist[herotext]}</HeroButton>
+                        }
+                        <HeroButton>Show Work</HeroButton>
+                    </Row>
                 </Col>
                 <Col xs={{ span: 10, order: 1, offset: 1 }} md={{ span: 5, order: 2 }}>
                     <HeroSvg />
                 </Col>
-            </Row>
-            <Row>
-                <HeroButton primary="true" onClick={() => { setHerotext(herotext + 1); }}>Know More</HeroButton>
-                <HeroButton>Show Work</HeroButton>
             </Row>
         </HeroContainer >
     )
@@ -38,7 +42,7 @@ function Hero() {
 export default Hero
 
 const HeroContainer = styled(Container)`
-    background-color:#5692EB;
+    background-color:#4682DB;
     color:#f2f2f2;
     font-family: 'Open Sans', sans-serif;
     padding:5%;
