@@ -23,28 +23,36 @@ function About() {
         <AboutContainer>
             <h2 style={{ "textAlign": "center" }}>About Me</h2>
             <Row style={{ "margin": "10% 0" }}>
-                <Col className="hoverpair">
+                <Col xs={12} md={6}>
                     <ReactCardFlip isFlipped={isFlipped1} flipDirection="horizontal">
                         <AboutCard onClick={handleClick1} onMouseEnter={handleClick1}>
-                            <Col>
-                                Personal.
-                            </Col>
+                            Personal.
                         </AboutCard >
 
                         <AboutCard onClick={handleClick1} onMouseLeave={handleClick1}>
-                            This is the back of the card.
+                            ✔️Watches Anime <br />
+                            ✔️Cooks great food <br />
+                            ✔️Plays football,cricket  and valorant <br />
+                            ✔️Sucker for new experiences <br />
+                            ❌Can't forgive spoilers <br />
+                            ❌Not sleeping before 2am
                         </AboutCard >
                     </ReactCardFlip>
                 </Col>
 
-                <Col>
+                <Col xs={12} md={6}>
                     <ReactCardFlip isFlipped={isFlipped2} flipDirection="horizontal">
                         <AboutCard onClick={handleClick2} onMouseEnter={handleClick2}>
                             Professional.
                         </AboutCard >
 
                         <AboutCard onClick={handleClick2} onMouseLeave={handleClick2}>
-                            This is the back of the card.
+                            ✔️Automates Everything <br />
+                            ✔️Dark theme <br />
+                            ✔️Is probably coding even now <br />
+                            ✔️Fascinated by design <br />
+                            ❌Can't not refactor code<br />
+                            ❌Never taking spaces over tabs
                         </AboutCard >
                     </ReactCardFlip>
                 </Col>
