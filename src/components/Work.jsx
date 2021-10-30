@@ -10,7 +10,7 @@ function Work() {
                 <WorkCol>
                     <WorkCard style={{ "width": '18rem' }} className="mx-auto" >
                         <Card.Body>
-                            <Card.Title>OCR Pipleline</Card.Title>
+                            <Card.Title>OCR Pipeline</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Python</Card.Subtitle>
                             <Card.Text>
                                 A pipeline of scripts to scrape, screenshot and convert tables into sheets and further test their websites for legible leads

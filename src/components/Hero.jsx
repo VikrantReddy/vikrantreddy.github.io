@@ -20,7 +20,7 @@ function Hero() {
                         <HeroButton>Show Work</HeroButton>
                     </Row>
                 </Col>
-                <Col xs={{ span: 10, order: 1, offset: 1 }} md={{ span: 5, order: 2 }}>
+                <Col xs={{ span: 10, order: 1, offset: 1 }} md={{ span: 5, order: 2 }} style={{ marginTop: "1.5rem" }}>
                     <HeroSvg />
                 </Col>
             </Row>
