@@ -13,7 +13,7 @@ function Work() {
                             <Card.Title>OCR Pipleline</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Python</Card.Subtitle>
                             <Card.Text>
-                                A pipeline of scripts to scrape, screenshot and convert tables from online into sheets and further test their websites for legible leads
+                                A pipeline of scripts to scrape, screenshot and convert tables into sheets and further test their websites for legible leads
                             </Card.Text>
                         </Card.Body>
                     </WorkCard>
@@ -35,7 +35,7 @@ function Work() {
                             <Card.Title>Synchronized Player</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Javascript</Card.Subtitle>
                             <Card.Text>
-                                A chrome extension that lets you watch your favorite tv shows and movies with your friends on any platform
+                                A chrome extension that lets you watch your favorite tv shows and movies with your friends on any video platform
                             </Card.Text>
 
                         </Card.Body>
@@ -47,7 +47,7 @@ function Work() {
                             <Card.Title>Advanced Text Snipper</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Python</Card.Subtitle>
                             <Card.Text>
-                                Windows native screen snipper with additional character recognition features from the core to copy text from images on the go
+                                Windows native snipper with additional character recognition features from the core to copy text from images on the go
                             </Card.Text>
                         </Card.Body>
                     </WorkCard>
