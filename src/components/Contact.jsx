@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components'
 
 function Contact() {
     return (
-        <ContactContainer>
+        <ContactContainer id="contact">
             <h2 style={{ "textAlign": "center", "marginTop": "1rem" }}>Contact Me</h2>
             <Row className="justify-content-center">
                 <HeroButton primary="true">Form</HeroButton>

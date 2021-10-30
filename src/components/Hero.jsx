@@ -9,7 +9,7 @@ function Hero() {
     let textlist = ["Vikrant codes less, refactors more", "He works as a full-time freelancer and a part-time tutor", "He squashes bugs and saves time", "HTML is a programming language.\nYou should totally hire him.", "Let his work speak for him \n👇"]
     let buttonlist = ["Tell me more", "Neat!", "1 truth 1 lie", "See why"]
     return (
-        <HeroContainer>
+        <HeroContainer id="home">
             <Row>
                 <Col style={{ 'marginTop': "10%" }} xs={{ span: 12, order: 2 }} md={{ span: 6, order: 1 }} >
                     {<Herotext text={textlist[herotext]} />}

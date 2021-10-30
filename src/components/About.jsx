@@ -34,10 +34,10 @@ function About() {
 
 
     return (
-        <AboutContainer>
+        <AboutContainer id="about">
             <h2 style={{ "textAlign": "center", "marginTop": "1rem" }}>About Me</h2>
             <Row style={{ "margin": "10% 0" }}>
-                <Col xs={12} md={6}>
+                <Col xs={12} md={5} lg={5}>
                     <ReactCardFlip isFlipped={isFlipped1} flipDirection="horizontal">
                         <AboutCard onClick={(evt) => { if (isMobile) { handleClick1(evt) } }} onMouseEnter={(evt) => { if (!isMobile) { handleClick1(evt) } }}>
                             Personal.
@@ -54,7 +54,7 @@ function About() {
                     </ReactCardFlip>
                 </Col>
 
-                <Col xs={12} md={6}>
+                <Col xs={12} md={{ span: 5, offset: 1 }} lg={{ span: 5, offset: 1 }}>
                     <ReactCardFlip isFlipped={isFlipped2} flipDirection="horizontal">
                         <AboutCard onClick={(evt) => { if (isMobile) { handleClick2(evt) } }} onMouseEnter={(evt) => { if (!isMobile) { handleClick2(evt) } }}>
                             Professional.
@@ -62,7 +62,7 @@ function About() {
 
                         <AboutCard onClick={(evt) => { if (isMobile) { handleClick2(evt) } }} onMouseLeave={(evt) => { if (!isMobile) { handleClick2(evt) } }}>
                             ✔️Automates Everything <br />
-                            ✔️Dark theme <br />
+                            ✔️Likes Dark theme <br />
                             ✔️Is probably coding even now <br />
                             ✔️Fascinated by design <br />
                             ❌Can't not refactor code<br />
@@ -91,5 +91,5 @@ const AboutCard = styled.div`
     border: 1px solid;
     padding: 1rem;
     margin: 2vh 2vw;
-    width:80%
+    max-width:inherit;
 `

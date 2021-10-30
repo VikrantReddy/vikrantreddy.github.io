@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 function Work() {
     return (
-        <WorkContainer>
+        <WorkContainer id="work">
             <h2 style={{ "textAlign": "center", "marginBottom": "10vh", "marginTop": "1rem", "color": "white" }}>My Works</h2>
             <Row xs={1} md={2} className="g-8 mx-auto">
                 <WorkCol>
