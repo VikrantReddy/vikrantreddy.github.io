@@ -6,7 +6,7 @@ import Herotext from "./Herotext.jsx";
 
 function Hero() {
     const [herotext, setHerotext] = useState(0);
-    let textlist = ["Vikrant codes less, debugs more", "He works as a full-time freelancer and a part-time tutor", "He squashes bugs and saves time", "HTML is a programming language.\nYou should totally hire him", "Let his work speak for him \n👇"]
+    let textlist = ["Vikrant codes less, refactors more", "He works as a full-time freelancer and a part-time tutor", "He squashes bugs and saves time", "HTML is a programming language.\nYou should totally hire him.", "Let his work speak for him \n👇"]
     let buttonlist = ["Tell me more", "Neat!", "1 truth 1 lie", "See why"]
     return (
         <HeroContainer>
@@ -35,9 +35,10 @@ const HeroContainer = styled(Container)`
     color:#f2f2f2;
     font-family: 'Open Sans', sans-serif;
     padding:5%;
-    margin: 5% 2% 2% 2%;
+    margin-top: 5%; 
     max-width: 96%;
     min-height: 64vh;
+    position:relative;
 `
 const HeroButton = styled(Button)`
   background: transparent;
