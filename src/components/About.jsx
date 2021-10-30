@@ -84,7 +84,7 @@ const AboutContainer = styled(Container)`
     padding:5%;
     margin:2%;
     max-width: 96%;
-    height: 60vh;
+    min-height: 60vh;
 `
 
 const AboutCard = styled.div`

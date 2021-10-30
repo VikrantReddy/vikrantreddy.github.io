@@ -119,4 +119,5 @@ const WorkCol = styled(Col)`
 `
 const WorkCard = styled(Card)`
     background-color:#f2f2f2;
+    height:12.5rem;
 `
