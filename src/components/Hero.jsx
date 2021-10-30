@@ -17,13 +17,13 @@ function Hero() {
                         {herotext < textlist.length - 1 &&
                             <HeroButton primary="true" onClick={() => { setHerotext((herotext + 1) % textlist.length); }}>{buttonlist[herotext]}</HeroButton>
                         }
-                        <HeroButton>Show Work</HeroButton>
+                        <HeroButton onClick={() => { document.getElementsByClassName("nav-link")[2].click() }} >Show Work</HeroButton>
                     </Row>
                 </Col>
                 <Col xs={{ span: 10, order: 1, offset: 1 }} md={{ span: 5, order: 2 }} style={{ marginTop: "1.5rem" }}>
                     <HeroSvg />
                 </Col>
-            </Row>
+            </Row >
         </HeroContainer >
     )
 }
