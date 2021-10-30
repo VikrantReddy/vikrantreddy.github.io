@@ -35,7 +35,7 @@ function About() {
 
     return (
         <AboutContainer>
-            <h2 style={{ "textAlign": "center" }}>About Me</h2>
+            <h2 style={{ "textAlign": "center", "marginTop": "1rem" }}>About Me</h2>
             <Row style={{ "margin": "10% 0" }}>
                 <Col xs={12} md={6}>
                     <ReactCardFlip isFlipped={isFlipped1} flipDirection="horizontal">
@@ -78,7 +78,7 @@ function About() {
 export default About
 
 const AboutContainer = styled(Container)`
-    background-color:#272C2C;
+    background-color:#083754;
     color:#f2f2f2;
     font-family: 'Open Sans', sans-serif;
     padding:5%;

@@ -5,10 +5,10 @@ import styled from 'styled-components'
 function Work() {
     return (
         <WorkContainer>
-            <h2 style={{ "textAlign": "center", "marginBottom": "10vh", "color": "white" }}>My Works</h2>
+            <h2 style={{ "textAlign": "center", "marginBottom": "10vh", "marginTop": "1rem", "color": "white" }}>My Works</h2>
             <Row xs={1} md={2} className="g-8 mx-auto">
                 <WorkCol>
-                    <WorkCard style={{ width: '18rem' }} className="mx-auto" >
+                    <WorkCard style={{ "width": '18rem' }} className="mx-auto" >
                         <Card.Body>
                             <Card.Title>OCR Pipleline</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Python</Card.Subtitle>
@@ -107,7 +107,7 @@ export default Work
 
 
 const WorkContainer = styled(Container)`
-    background-color:#1642DB;
+    background-color:#1e6b96;
     font-family: 'Open Sans', sans-serif;
     padding:5%;
     margin:2%;

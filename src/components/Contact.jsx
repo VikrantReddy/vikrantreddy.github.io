@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components'
 function Contact() {
     return (
         <ContactContainer>
-            <h2 style={{ "textAlign": "center" }}>Contact Me</h2>
+            <h2 style={{ "textAlign": "center", "marginTop": "1rem" }}>Contact Me</h2>
             <Row className="justify-content-center">
                 <HeroButton primary="true">Form</HeroButton>
                 <HeroButton href={"mailto:vikrantreddy@hotmail.com"}>Email</HeroButton>
@@ -17,7 +17,7 @@ function Contact() {
 export default Contact
 
 const ContactContainer = styled(Container)`
-    background-color:#272C2C;
+    background-color:#083754;
     color:#f2f2f2;
     font-family: 'Open Sans', sans-serif;
     padding:5%;
@@ -29,13 +29,13 @@ const HeroButton = styled(Button)`
   font-size:larger;
   border-radius: 3px;
   font-family: "Montserrat", sans-serif;
-  border: 2px solid #1642DB;
-  color: #1642DB;
+  border: 2px solid #1e6b96;
+  color: #1e6b96;
   margin: 1em;
   padding: 0.25em 1.5em;
 
   ${props => props.primary && css`
-    background: #1642DB;
+    background: #1e6b96;
     color: #f2f2f2;
   `}
 `;
