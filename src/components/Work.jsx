@@ -8,7 +8,7 @@ function Work() {
             <h2 style={{ "textAlign": "center", "marginBottom": "10vh", "color": "white" }}>My Works</h2>
             <Row xs={1} md={2} className="g-8 mx-auto">
                 <WorkCol>
-                    <Card style={{ width: '18rem' }} className="mx-auto" >
+                    <WorkCard style={{ width: '18rem' }} className="mx-auto" >
                         <Card.Body>
                             <Card.Title>OCR Pipleline</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Python</Card.Subtitle>
@@ -16,10 +16,10 @@ function Work() {
                                 A pipeline of scripts to scrape, screenshot and convert tables from online into sheets and further test their websites for legible leads
                             </Card.Text>
                         </Card.Body>
-                    </Card>
+                    </WorkCard>
                 </WorkCol>
                 <WorkCol>
-                    <Card style={{ width: '18rem' }} className="mx-auto" >
+                    <WorkCard style={{ width: '18rem' }} className="mx-auto" >
                         <Card.Body>
                             <Card.Title>Automated Dropshipping</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Python</Card.Subtitle>
@@ -27,10 +27,10 @@ function Work() {
                                 Plug and play scripts to scrape ecom websites with a CMS like shopify or squarespace to create your own dropshipping business
                             </Card.Text>
                         </Card.Body>
-                    </Card>
+                    </WorkCard>
                 </WorkCol>
                 <WorkCol>
-                    <Card style={{ width: '18rem' }} className="mx-auto" >
+                    <WorkCard style={{ width: '18rem' }} className="mx-auto" >
                         <Card.Body>
                             <Card.Title>Synchronized Player</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Javascript</Card.Subtitle>
@@ -39,10 +39,10 @@ function Work() {
                             </Card.Text>
 
                         </Card.Body>
-                    </Card>
+                    </WorkCard>
                 </WorkCol>
                 <WorkCol>
-                    <Card style={{ width: '18rem' }} className="mx-auto" >
+                    <WorkCard style={{ width: '18rem' }} className="mx-auto" >
                         <Card.Body>
                             <Card.Title>Advanced Text Snipper</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Python</Card.Subtitle>
@@ -50,11 +50,11 @@ function Work() {
                                 Windows native screen snipper with additional character recognition features from the core to copy text from images on the go
                             </Card.Text>
                         </Card.Body>
-                    </Card>
+                    </WorkCard>
                 </WorkCol>
 
                 <WorkCol>
-                    <Card style={{ width: '18rem' }} className="mx-auto" >
+                    <WorkCard style={{ width: '18rem' }} className="mx-auto" >
                         <Card.Body>
                             <Card.Title>Parking finder</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">React Native & C#</Card.Subtitle>
@@ -62,10 +62,10 @@ function Work() {
                                 A programmed ESP8266 with a web socket server hosted on cloud to help users navigate to the closest vaccant parking spot
                             </Card.Text>
                         </Card.Body>
-                    </Card>
+                    </WorkCard>
                 </WorkCol>
                 <WorkCol>
-                    <Card style={{ width: '18rem' }} className="mx-auto" >
+                    <WorkCard style={{ width: '18rem' }} className="mx-auto" >
                         <Card.Body>
                             <Card.Title>Excel to Database</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Python & Google Sheets</Card.Subtitle>
@@ -74,10 +74,10 @@ function Work() {
                             </Card.Text>
 
                         </Card.Body>
-                    </Card>
+                    </WorkCard>
                 </WorkCol>
                 <WorkCol>
-                    <Card style={{ width: '18rem' }} className="mx-auto"  >
+                    <WorkCard style={{ width: '18rem' }} className="mx-auto"  >
                         <Card.Body>
                             <Card.Title>Amazon Watcher</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Python</Card.Subtitle>
@@ -85,10 +85,10 @@ function Work() {
                                 Scrapes selected amazon products periodically and notifies user via E-mail when the item under watch is on a discont
                             </Card.Text>
                         </Card.Body>
-                    </Card>
+                    </WorkCard>
                 </WorkCol>
                 <WorkCol>
-                    <Card style={{ width: '18rem' }} className="mx-auto" >
+                    <WorkCard style={{ width: '18rem' }} className="mx-auto" >
                         <Card.Body>
                             <Card.Title>Mobile Mouse</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">React Native & Python</Card.Subtitle>
@@ -96,9 +96,8 @@ function Work() {
                                 An app that lets users use their phone by sensing the accelerometer to scroll through long web comics
                             </Card.Text>
                         </Card.Body>
-                    </Card>
+                    </WorkCard>
                 </WorkCol>
-
             </Row>
         </WorkContainer >
     )
@@ -117,4 +116,7 @@ const WorkContainer = styled(Container)`
 
 const WorkCol = styled(Col)`
     margin: 1rem 0;
+`
+const WorkCard = styled(Card)`
+    background-color:#f2f2f2;
 `
