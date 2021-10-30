@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import styled from 'styled-components'
 import ReactCardFlip from 'react-card-flip';
@@ -8,6 +8,7 @@ function About() {
     const [isFlipped2, flip2] = useState(false)
 
     function handleClick1(e) {
+        console.log(isFlipped1, isFlipped2)
         e.preventDefault();
         flip1(!isFlipped1)
     }
@@ -17,6 +18,19 @@ function About() {
         flip2(!isFlipped2)
     }
 
+    const [isMobile, setIsMobile] = useState(false)
+
+    const handleResize = () => {
+        if (window.innerWidth < 720) {
+            setIsMobile(true)
+        } else {
+            setIsMobile(false)
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener("resize", handleResize)
+    })
 
 
     return (
@@ -25,14 +39,14 @@ function About() {
             <Row style={{ "margin": "10% 0" }}>
                 <Col xs={12} md={6}>
                     <ReactCardFlip isFlipped={isFlipped1} flipDirection="horizontal">
-                        <AboutCard onClick={handleClick1} onMouseEnter={handleClick1}>
+                        <AboutCard onClick={(evt) => { if (isMobile) { handleClick1(evt) } }} onMouseEnter={(evt) => { if (!isMobile) { handleClick1(evt) } }}>
                             Personal.
                         </AboutCard >
 
-                        <AboutCard onClick={handleClick1} onMouseLeave={handleClick1}>
+                        <AboutCard onClick={(evt) => { if (isMobile) { handleClick1(evt) } }} onMouseLeave={(evt) => { if (!isMobile) { handleClick1(evt) } }}>
                             ✔️Watches Anime <br />
                             ✔️Cooks great food <br />
-                            ✔️Plays football,cricket  and valorant <br />
+                            ✔️Plays sports and video games <br />
                             ✔️Sucker for new experiences <br />
                             ❌Can't forgive spoilers <br />
                             ❌Not sleeping before 2am
@@ -42,11 +56,11 @@ function About() {
 
                 <Col xs={12} md={6}>
                     <ReactCardFlip isFlipped={isFlipped2} flipDirection="horizontal">
-                        <AboutCard onClick={handleClick2} onMouseEnter={handleClick2}>
+                        <AboutCard onClick={(evt) => { if (isMobile) { handleClick2(evt) } }} onMouseEnter={(evt) => { if (!isMobile) { handleClick2(evt) } }}>
                             Professional.
                         </AboutCard >
 
-                        <AboutCard onClick={handleClick2} onMouseLeave={handleClick2}>
+                        <AboutCard onClick={(evt) => { if (isMobile) { handleClick2(evt) } }} onMouseLeave={(evt) => { if (!isMobile) { handleClick2(evt) } }}>
                             ✔️Automates Everything <br />
                             ✔️Dark theme <br />
                             ✔️Is probably coding even now <br />
@@ -70,15 +84,12 @@ const AboutContainer = styled(Container)`
     padding:5%;
     margin:2%;
     max-width: 96%;
+    height: 60vh;
 `
-const AboutText = styled.p`
-    font-family: 'Open Sans', sans-serif;
-    font-size: larger;
-    text-align: center;
-`
+
 const AboutCard = styled.div`
     border: 1px solid;
     padding: 1rem;
-    margin: 0 2vw;
-    max-width:80%
+    margin: 2vh 2vw;
+    width:80%
 `
